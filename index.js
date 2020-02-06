@@ -1,8 +1,6 @@
 var promise = require('promise');
 var api = require('adapt-cli').api;
 
-process.chdir('../../') // change accordingly so that cwd is parent of src directory
-
 var renderer = {
   log:function(){console.log.apply(this, arguments)},
   error:function(){console.error.apply(this, arguments)}
@@ -113,4 +111,6 @@ var renderer = {
     ERROR_UPDATE_INCOMPATIBLE
 */
 
-api.commands.update().then(renderer.log, renderer.error);
+//api.commands.install('adapt-devtools#3.0.0', '../..').then(renderer.log, renderer.error);
+//api.commands.update('adapt-devtools', '../..').then(renderer.log, renderer.error);
+//api.commands.uninstall('adapt-devtools', '../..').then(renderer.log, renderer.error);
